@@ -3,99 +3,127 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="A simple home for selected projects, notes, and experiments."
-    />
-    <meta name="theme-color" content="#f6f5f1" />
-    <title>Your Name — Projects</title>
+    <meta name="description" content="A small collection of projects and useful links." />
+    <meta name="theme-color" content="#f4f5f2" />
+    <title>projects.example.com</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <header class="site-header container">
-      <a class="wordmark" href="#top" aria-label="Home">YN.</a>
-      <nav aria-label="Primary navigation">
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="mailto:hello@example.com">Contact</a>
-      </nav>
+    <header class="site-header">
+      <a id="domain-name" href="./" aria-label="Home">projects.example.com</a>
     </header>
 
-    <main id="top">
-      <section class="hero container" aria-labelledby="intro-title">
-        <p class="eyebrow">Designer · Developer · Maker</p>
-        <h1 id="intro-title">A quiet corner for thoughtful work.</h1>
-        <p class="hero-copy">
-          A short introduction goes here. Use this space to say what you make,
-          what you care about, and what you are exploring now.
-        </p>
-        <a class="text-link" href="#work">See selected work <span aria-hidden="true">↓</span></a>
-      </section>
+    <main>
+      <div class="browser" aria-roledescription="carousel" aria-label="Link collections">
+        <button class="arrow arrow-previous" type="button" aria-label="Previous collection">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="m15 18-6-6 6-6" />
+          </svg>
+        </button>
 
-      <section class="work container" id="work" aria-labelledby="work-title">
-        <div class="section-heading">
-          <h2 id="work-title">Selected work</h2>
-          <p>A few recent projects and experiments.</p>
+        <div class="panel">
+          <div class="sets" aria-live="polite">
+            <section class="link-set is-active" aria-labelledby="set-projects">
+              <header class="set-header">
+                <p>01</p>
+                <h1 id="set-projects">Projects</h1>
+              </header>
+
+              <ul class="link-list">
+                <li>
+                  <a href="https://example.com">
+                    <span class="link-title">Project one <span aria-hidden="true">↗</span></span>
+                    <span class="link-description">A short description of what this project does and why it exists.</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://example.com">
+                    <span class="link-title">Project two <span aria-hidden="true">↗</span></span>
+                    <span class="link-description">A concise sentence giving visitors enough context to follow the link.</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://example.com">
+                    <span class="link-title">Project three <span aria-hidden="true">↗</span></span>
+                    <span class="link-description">Another small experiment, tool, or piece of work.</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://example.com">
+                    <span class="link-title">Project four <span aria-hidden="true">↗</span></span>
+                    <span class="link-description">A final placeholder for this collection.</span>
+                  </a>
+                </li>
+              </ul>
+            </section>
+
+            <section class="link-set" aria-labelledby="set-writing" hidden>
+              <header class="set-header">
+                <p>02</p>
+                <h1 id="set-writing">Writing</h1>
+              </header>
+
+              <ul class="link-list">
+                <li>
+                  <a href="https://example.com">
+                    <span class="link-title">A useful note <span aria-hidden="true">↗</span></span>
+                    <span class="link-description">A brief explanation of the subject covered in this note.</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://example.com">
+                    <span class="link-title">Things I learned <span aria-hidden="true">↗</span></span>
+                    <span class="link-description">Collected observations from building and exploring.</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://example.com">
+                    <span class="link-title">A longer thought <span aria-hidden="true">↗</span></span>
+                    <span class="link-description">A short summary that invites the reader to continue.</span>
+                  </a>
+                </li>
+              </ul>
+            </section>
+
+            <section class="link-set" aria-labelledby="set-bookmarks" hidden>
+              <header class="set-header">
+                <p>03</p>
+                <h1 id="set-bookmarks">Bookmarks</h1>
+              </header>
+
+              <ul class="link-list">
+                <li>
+                  <a href="https://example.com">
+                    <span class="link-title">Reference library <span aria-hidden="true">↗</span></span>
+                    <span class="link-description">Documentation, references, and frequently used resources.</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://example.com">
+                    <span class="link-title">Inspiration <span aria-hidden="true">↗</span></span>
+                    <span class="link-description">Interesting work from thoughtful people around the web.</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://example.com">
+                    <span class="link-title">Tools <span aria-hidden="true">↗</span></span>
+                    <span class="link-description">Small utilities worth remembering and sharing.</span>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+
+          <nav class="pagination" aria-label="Choose a collection"></nav>
         </div>
 
-        <div class="project-grid">
-          <article class="project-card">
-            <a href="#" aria-label="View Project One">
-              <div class="project-visual visual-one" aria-hidden="true"></div>
-              <div class="project-meta">
-                <div>
-                  <h3>Project One</h3>
-                  <p>A concise description of the project.</p>
-                </div>
-                <span aria-hidden="true">↗</span>
-              </div>
-            </a>
-          </article>
-
-          <article class="project-card">
-            <a href="#" aria-label="View Project Two">
-              <div class="project-visual visual-two" aria-hidden="true"></div>
-              <div class="project-meta">
-                <div>
-                  <h3>Project Two</h3>
-                  <p>Another small piece of supporting copy.</p>
-                </div>
-                <span aria-hidden="true">↗</span>
-              </div>
-            </a>
-          </article>
-
-          <article class="project-card">
-            <a href="#" aria-label="View Project Three">
-              <div class="project-visual visual-three" aria-hidden="true"></div>
-              <div class="project-meta">
-                <div>
-                  <h3>Project Three</h3>
-                  <p>A place for the final project summary.</p>
-                </div>
-                <span aria-hidden="true">↗</span>
-              </div>
-            </a>
-          </article>
-        </div>
-      </section>
-
-      <section class="about container" id="about" aria-labelledby="about-title">
-        <p class="eyebrow">About</p>
-        <h2 id="about-title">
-          I enjoy turning complex ideas into clear, useful, and enduring things.
-        </h2>
-        <a class="text-link" href="mailto:hello@example.com">Start a conversation <span aria-hidden="true">↗</span></a>
-      </section>
-    </main>
-
-    <footer class="site-footer container">
-      <p>© <span id="year">2026</span> Your Name</p>
-      <div class="social-links">
-        <a href="#">GitHub</a>
-        <a href="#">LinkedIn</a>
+        <button class="arrow arrow-next" type="button" aria-label="Next collection">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="m9 18 6-6-6-6" />
+          </svg>
+        </button>
       </div>
-    </footer>
+    </main>
   </body>
 </html>

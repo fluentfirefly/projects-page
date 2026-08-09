@@ -14,10 +14,13 @@ Then open <http://localhost:8000>.
 
 ## Customize
 
-- Replace the placeholder name, introduction, project text, and links in `index.html`.
-- Update the colors and type scale near the top of `styles.css`.
-- Replace the gradient project placeholders with images when ready.
-- Change the description and page title in the `<head>` of `index.html`.
+- Each `<section class="link-set">` in `index.html` is one collection.
+- Duplicate or remove those sections to change the number of collections; the
+  navigation dots are generated automatically.
+- Each list item contains a clickable title and short description.
+- Replace `projects.example.com` with your domain as a local fallback. On the
+  published site, the displayed name is automatically read from the URL.
+- Update the restrained color palette near the top of `styles.css`.
 
 ## Deploy
 
