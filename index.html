@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="A small collection of projects and useful links." />
-    <meta name="theme-color" content="#f4f5f2" />
+    <meta name="theme-color" content="#17111f" />
     <title>projects.example.com</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
@@ -23,91 +23,97 @@
         </button>
 
         <div class="panel">
+          <header class="collection-header">
+            <nav class="set-tabs" aria-label="Collections" role="tablist"></nav>
+            <p class="current-set-title" aria-live="polite"></p>
+          </header>
+
           <div class="sets" aria-live="polite">
-            <section class="link-set is-active" aria-labelledby="set-projects">
-              <header class="set-header">
-                <p>01</p>
-                <h1 id="set-projects">Projects</h1>
-              </header>
+            <section class="link-set is-active" id="collection-projects" aria-labelledby="set-projects">
+              <h1 class="visually-hidden" id="set-projects">Projects</h1>
 
               <ul class="link-list">
                 <li>
                   <a href="https://example.com">
                     <span class="link-title">Project one <span aria-hidden="true">↗</span></span>
+                    <span class="link-url">https://example.com</span>
                     <span class="link-description">A short description of what this project does and why it exists.</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://example.com">
+                  <a href="https://github.com/example/project-two">
                     <span class="link-title">Project two <span aria-hidden="true">↗</span></span>
+                    <span class="link-url">https://github.com/example/project-two</span>
                     <span class="link-description">A concise sentence giving visitors enough context to follow the link.</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://example.com">
+                  <a href="https://example.org/project-three">
                     <span class="link-title">Project three <span aria-hidden="true">↗</span></span>
+                    <span class="link-url">https://example.org/project-three</span>
                     <span class="link-description">Another small experiment, tool, or piece of work.</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://example.com">
+                  <a href="https://codeberg.org/example/project-four">
                     <span class="link-title">Project four <span aria-hidden="true">↗</span></span>
+                    <span class="link-url">https://codeberg.org/example/project-four</span>
                     <span class="link-description">A final placeholder for this collection.</span>
                   </a>
                 </li>
               </ul>
             </section>
 
-            <section class="link-set" aria-labelledby="set-writing" hidden>
-              <header class="set-header">
-                <p>02</p>
-                <h1 id="set-writing">Writing</h1>
-              </header>
+            <section class="link-set" id="collection-writing" aria-labelledby="set-writing" hidden>
+              <h1 class="visually-hidden" id="set-writing">Writing</h1>
 
               <ul class="link-list">
                 <li>
-                  <a href="https://example.com">
+                  <a href="https://notes.example.com/useful-note">
                     <span class="link-title">A useful note <span aria-hidden="true">↗</span></span>
+                    <span class="link-url">https://notes.example.com/useful-note</span>
                     <span class="link-description">A brief explanation of the subject covered in this note.</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://example.com">
+                  <a href="https://notes.example.com/things-i-learned">
                     <span class="link-title">Things I learned <span aria-hidden="true">↗</span></span>
+                    <span class="link-url">https://notes.example.com/things-i-learned</span>
                     <span class="link-description">Collected observations from building and exploring.</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://example.com">
+                  <a href="https://notes.example.com/a-longer-thought">
                     <span class="link-title">A longer thought <span aria-hidden="true">↗</span></span>
+                    <span class="link-url">https://notes.example.com/a-longer-thought</span>
                     <span class="link-description">A short summary that invites the reader to continue.</span>
                   </a>
                 </li>
               </ul>
             </section>
 
-            <section class="link-set" aria-labelledby="set-bookmarks" hidden>
-              <header class="set-header">
-                <p>03</p>
-                <h1 id="set-bookmarks">Bookmarks</h1>
-              </header>
+            <section class="link-set" id="collection-bookmarks" aria-labelledby="set-bookmarks" hidden>
+              <h1 class="visually-hidden" id="set-bookmarks">Bookmarks</h1>
 
               <ul class="link-list">
                 <li>
-                  <a href="https://example.com">
+                  <a href="https://developer.mozilla.org">
                     <span class="link-title">Reference library <span aria-hidden="true">↗</span></span>
+                    <span class="link-url">https://developer.mozilla.org</span>
                     <span class="link-description">Documentation, references, and frequently used resources.</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://example.com">
+                  <a href="https://example.com/inspiration">
                     <span class="link-title">Inspiration <span aria-hidden="true">↗</span></span>
+                    <span class="link-url">https://example.com/inspiration</span>
                     <span class="link-description">Interesting work from thoughtful people around the web.</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://example.com">
+                  <a href="https://example.com/tools">
                     <span class="link-title">Tools <span aria-hidden="true">↗</span></span>
+                    <span class="link-url">https://example.com/tools</span>
                     <span class="link-description">Small utilities worth remembering and sharing.</span>
                   </a>
                 </li>

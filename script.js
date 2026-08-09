@@ -2,6 +2,8 @@ const sets = [...document.querySelectorAll(".link-set")];
 const previousButton = document.querySelector(".arrow-previous");
 const nextButton = document.querySelector(".arrow-next");
 const pagination = document.querySelector(".pagination");
+const tabsContainer = document.querySelector(".set-tabs");
+const currentSetTitle = document.querySelector(".current-set-title");
 const panel = document.querySelector(".panel");
 const domainName = document.querySelector("#domain-name");
 
@@ -26,6 +28,21 @@ const dots = sets.map((set, index) => {
   return dot;
 });
 
+const tabs = sets.map((set, index) => {
+  const tab = document.createElement("button");
+  const title = set.querySelector("h1").textContent;
+
+  tab.className = "set-tab";
+  tab.type = "button";
+  tab.textContent = title;
+  tab.setAttribute("role", "tab");
+  tab.setAttribute("aria-controls", set.id);
+  tab.addEventListener("click", () => showSet(index));
+  tabsContainer.append(tab);
+
+  return tab;
+});
+
 function showSet(index) {
   if (index < 0 || index >= sets.length || index === currentIndex) return;
 
@@ -34,14 +51,13 @@ function showSet(index) {
   currentIndex = index;
   sets[currentIndex].hidden = false;
   sets[currentIndex].classList.add("is-active");
-  sets[currentIndex].scrollTop = 0;
-
   updateControls();
 }
 
 function updateControls() {
   previousButton.hidden = currentIndex === 0;
   nextButton.hidden = currentIndex === sets.length - 1;
+  currentSetTitle.textContent = sets[currentIndex].querySelector("h1").textContent;
 
   dots.forEach((dot, index) => {
     if (index === currentIndex) {
@@ -49,6 +65,11 @@ function updateControls() {
     } else {
       dot.removeAttribute("aria-current");
     }
+  });
+
+  tabs.forEach((tab, index) => {
+    tab.setAttribute("aria-selected", String(index === currentIndex));
+    tab.tabIndex = index === currentIndex ? 0 : -1;
   });
 }
 
